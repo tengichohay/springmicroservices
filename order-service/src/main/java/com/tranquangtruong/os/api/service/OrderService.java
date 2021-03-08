@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 @Service
 public class OrderService {
 
@@ -34,5 +36,9 @@ public class OrderService {
 
 
          return new TransactionResponse(order,paymentResponse.getAmount(),paymentResponse.getTransactionId(),response);
+    }
+
+    public List<Order> getAllOrder() {
+        return orderRepository.findAll();
     }
 }

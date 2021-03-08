@@ -8,6 +8,8 @@ import com.tranquangtruong.os.api.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/order")
 public class OrderController {
@@ -20,6 +22,11 @@ public class OrderController {
 
 
         return orderService.saveOrder(request);
+    }
+
+    @GetMapping("/bookOrder")
+    public List<Order> getAllOrder(){
+        return orderService.getAllOrder();
     }
 
 }
