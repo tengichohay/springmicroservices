@@ -17,7 +17,7 @@ spring:
     console:
       enabled: true
   application:
-    name: ORDER-SERVICES
+    name: ORDER-SERVICE
   jpa:
     properties:
       hibernate:

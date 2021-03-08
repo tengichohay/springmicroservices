@@ -14,10 +14,16 @@ public class PaymentController  {
     @Autowired
     private PaymentService paymentService;
 
-    @PostMapping("doPayment")
+    @PostMapping("/doPayment")
     public Payment doPayment(@RequestBody Payment payment){
 
         return paymentService.doPayment(payment);
+    }
+
+    @GetMapping("/{orderId}")
+    public Payment findPaymentHistoryByOrderId(@PathVariable int orderId){
+        return paymentService.findPaymentHistoryByOrderId(orderId);
+
     }
 
 
