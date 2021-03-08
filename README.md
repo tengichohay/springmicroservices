@@ -1,3 +1,3 @@
 # springmicroservices
 
-![alt text](https://i.ibb.co/GJp35BV/Untitled.png)
+![alt text](https://raw.githubusercontent.com/tengichohay/springmicroservices/master/Untitled.png)
